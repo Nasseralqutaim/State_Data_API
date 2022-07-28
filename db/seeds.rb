@@ -10,7 +10,9 @@
 
 
 require "csv"
+
 csv_text = File.read(Rails.root.join("db", "state_data.csv"))
+
 csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
 
 datax = csv.map do |row|
@@ -21,6 +23,15 @@ datax = csv.map do |row|
     share_population_with_high_school_degree: row["share_population_with_high_school_degree"]
   )
 end    
+
+
+#todo: 
+# connect abrivation.csv to the main file
+# create a controller, routes to show localhost:3000/state
+# creatr a forntend 
+
+
+
 
 
 
