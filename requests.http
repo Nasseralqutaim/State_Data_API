@@ -1,0 +1,6 @@
+### Data Index
+GET http://localhost:3000/data.json
+
+### Data Show
+
+GET http://localhost:3000/data/1.json

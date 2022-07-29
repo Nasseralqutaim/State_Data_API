@@ -1,0 +1,3 @@
+class Abbreviation < ApplicationRecord
+ 
+end

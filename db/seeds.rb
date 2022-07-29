@@ -25,10 +25,25 @@ datax = csv.map do |row|
 end    
 
 
+
+csv_text2 = File.read(Rails.root.join("db", "abbreviations.csv"))
+csv2 = CSV.parse(csv_text2, :headers => true, :encoding => "ISO-8859-1")
+
+datay = csv2.map do |row|
+  abbreviations = Abbreviation.find_or_create_by(state_name: row["State"],
+    abbrev: row["Abbrev"],
+    code: row["Code"]
+)
+end 
+
+
+
+
+
 #todo: 
 # connect abrivation.csv to the main file
 # create a controller, routes to show localhost:3000/state
-# creatr a forntend 
+# create a forntend    Abbreviations
 
 
 

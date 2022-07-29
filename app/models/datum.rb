@@ -1,2 +1,4 @@
 class Datum < ApplicationRecord
+
 end
+
