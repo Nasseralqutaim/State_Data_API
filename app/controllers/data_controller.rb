@@ -5,7 +5,7 @@ class DataController < ApplicationController
   end
 
   def show
-    datum = Datum.find_by(id: params[:id])
+    datum = Datum.find_by(state: params[:state])
     render json: datum.as_json
   end
 

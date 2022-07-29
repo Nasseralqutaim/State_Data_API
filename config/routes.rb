@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   end
   
   get "/data" => "data#index"
-  get "/data/:id" => "data#show"
+  get "/data/:state" => "data#show"
   
 end
